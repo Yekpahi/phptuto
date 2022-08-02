@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP - Hello, World!</title>
-</head>
-<body>
-        <h1><?php echo 'Hello, World!'; ?></h1>
-</body>
-</html>
+<?php
+
+function df($prix)
+{
+    echo '<pre>';
+    var_dump($prix);
+    echo '<pre>';
+}
+
+$chiffre1 = 200;
+df($chiffre1);
+$chiffre2 = 100;
+df($chiffre2);
+$produit = $chiffre1 * $chiffre2;
+df($produit);
+require 'view.php';
