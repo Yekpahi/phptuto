@@ -1,16 +1,18 @@
-<?php
-
-function df($prix)
+<?php 
+/*
+$counter = 1;
+function increase($value)
 {
-    echo '<pre>';
-    var_dump($prix);
-    echo '<pre>';
+	$value+= 1;
+	echo $value;// 2
 }
 
-$chiffre1 = 200;
-df($chiffre1);
-$chiffre2 = 100;
-df($chiffre2);
-$produit = $chiffre1 * $chiffre2;
-df($produit);
+
+*/
+$message = "bonjour";
+function say() {
+    $message = "Salut";
+    echo $message;
+}
 require 'view.php';
+?>
