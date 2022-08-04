@@ -21,7 +21,9 @@ class Customer
 	}
 }
 
-$account = new Customer("Prince", 36);
-echo $account->getName(); // 100
-
+$customer = new Customer("Prince", 36);
+echo $customer->getName(); // 100
+$customer->setName('Bob');
+echo '<br>';
+echo $customer->getName();
 
