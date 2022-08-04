@@ -1,29 +1,29 @@
 <?php
 
-class Customer
+class BankAccount
 {
-	private $name;
-	public $age;
+    private $balance;
 
+    public function getBalance()
+    {
+        return $this->balance;
+    }
 
-	public function __construct ($name, $age)
-	{
-		$this->age = $age;
-		$this->name = $name;
-	}
+    public function deposit($amount)
+    {
+        if ($amount > 0) {
+            $this->balance += $amount;
+			echo $this->balance;
+        }
 
-	public function setName($name) {
-		$this->name = $name;
-	}
-	
-	public function getName(){
-		return $this->name;
-	}
+        return $this;
+    }
 }
 
-$customer = new Customer("Prince", 36);
-echo $customer->getName(); // 100
-$customer->setName('Bob');
-echo '<br>';
-echo $customer->getName();
+class SavingAccount extends BankAccount
+{
+}
 
+$account = new SavingAccount();
+$account->deposit(100);
+echo $account->getBalance();
